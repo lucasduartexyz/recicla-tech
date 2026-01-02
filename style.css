@@ -17,6 +17,7 @@ header {
   align-items: flex-start;
   align-items: flex-end;
   align-items: center;
+  border-bottom: 1px solid #b4aeae;
 }
 header div {
   display: flex;
@@ -49,16 +50,76 @@ header .btnVerdeHeader:hover {
 }
 
 .primeiraSection {
-  background-color: yellow;
-  height: 50vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 .primeiraSection section {
-  border: solid;
-  width: 50%;
-  height: 50vh;
+  width: 700px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+}
+.primeiraSection section h2 {
+  font-size: 3.5rem;
+  margin-bottom: 1.2rem;
+}
+.primeiraSection section p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+.primeiraSection section .boxBntsPrimeiraSection {
+  display: flex;
+  gap: 20px;
+}
+.primeiraSection section .btnVerde {
+  background-color: #21c05c;
+  color: #ffffff;
+  cursor: pointer;
+  justify-content: center;
+  width: 170px;
+  padding: 18px;
+  border-radius: 6px;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.primeiraSection section .btnVerde img {
+  width: 1.2rem;
+}
+.primeiraSection section .btnBranco {
+  background-color: #ffffff;
+  color: #2563eb;
+  cursor: pointer;
+  justify-content: center;
+  width: 170px;
+  padding: 18px;
+  border-radius: 6px;
+  border: 1px solid #2563eb;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.primeiraSection section .btnBranco img {
+  width: 1.2rem;
+}
+
+.segundaSection {
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.segundaSection .cardSegundaSection {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.segundaSection .cardSegundaSection h2 {
+  font-size: 2.5rem;
+  color: #16a34a;
 }
 
 .produtosDisponiveis {
