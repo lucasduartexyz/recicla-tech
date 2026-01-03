@@ -255,19 +255,80 @@ header {
       font-size: 0.8rem;
     }
   }
-  .cabecalhoSectionCentralizado {
-    text-align: center;
+}
+.cabecalhoSectionCentralizado {
+  text-align: center;
+  margin: auto;
+  width: 72rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+  p {
+    width: 42rem;
     margin: auto;
-    width: 72rem;
+    font-size: 1.5rem;
+  }
+}
+.sextaSection {
+  margin-top: 6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding-bottom: 6rem;
+  .boxBotoes {
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    h2 {
-      font-size: 2.5rem;
-      margin-bottom: 1.5rem;
+    gap: 2rem;
+    button {
+      color: #ffffff;
+      background: #16a34a;
+      font-size: 1rem;
+      padding: 0.7rem;
+      width: 12rem;
+      border: none;
+      border-radius: 6px;
     }
-    p {
-      font-size: 1.5rem;
+    .botaoBrancoBordaVerde {
+      color: #16a34a;
+      background: #ffffff;
+      border: 1px solid #16a34a;
     }
   }
+}
+footer {
+  background: #1f2937;
+  color: #ffffff;
+  .informacoesFooter {
+    display: flex;
+    justify-content: center;
+    padding: 3rem;
+    gap: 9rem;
+  }
+  .boxInfoFooter {
+    h2 {
+      display: flex;
+      justify-items: center;
+      gap: 1rem;
+    }
+    width: 24rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .iconsRedesSociais {
+    display: flex;
+    gap: 1rem;
+  }
+}
+
+.footerCopyright {
+  border-top: 1px solid #4b5563;
+  text-align: center;
+  padding: 1rem;
+  width: 64rem;
+  margin: auto;
 }
