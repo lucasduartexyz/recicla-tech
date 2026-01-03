@@ -49,6 +49,19 @@ header .btnVerdeHeader:hover {
   border-radius: 6px;
 }
 
+.cabecalhoSection {
+  margin: auto;
+  width: 72rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+.cabecalhoSection h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
 .primeiraSection {
   margin: 100px 0px;
   display: flex;
@@ -153,6 +166,7 @@ header .btnVerdeHeader:hover {
   font-weight: normal;
   font-size: 1.5rem;
   display: flex;
+  gap: 0.5rem;
   align-items: center;
 }
 .terceiraSection .boxCardsTerceiraSection #paraDoadores {
@@ -172,39 +186,92 @@ header .btnVerdeHeader:hover {
   margin-left: 2.5rem;
 }
 
-.produtosDisponiveis {
-  background-color: rgb(203, 244, 230);
-  height: 85vh;
-  display: flex;
-  justify-content: space-evenly;
-  justify-content: space-between;
-  justify-content: space-around;
-  align-items: flex-end;
-  align-items: flex-start;
-  align-items: center;
-}
-.produtosDisponiveis article {
-  border: solid red;
-  width: 20%;
-  height: 60vh;
+.quartaSection {
+  margin-top: 6rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  gap: 3rem;
 }
-.produtosDisponiveis article img {
-  width: 100%;
-  height: 30vh;
-  border: solid;
+.quartaSection .produtosDisponiveis {
+  margin: auto;
+  width: 72rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
 }
-.produtosDisponiveis article button {
-  width: 45%;
-  height: 5vh;
-  cursor: pointer;
-  margin-bottom: 1rem;
+.quartaSection .produtosDisponiveis h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+.quartaSection .boxCardsProdutos {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+}
+.quartaSection .cardProduto {
+  width: 20rem;
+  text-align: center;
+  border: 1px solid #16a34a;
+  border-radius: 0.375rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-bottom: 1rem;
+}
+.quartaSection .buttonCardProduto {
+  margin: auto;
+  border: none;
   background-color: #16a34a;
   color: #ffffff;
-  font-weight: 900;
-  border-radius: 15px;
-  font-size: 1.2rem;
+  padding: 0.625rem;
+  border-radius: 6px;
+  width: 12rem;
+}
+
+.quintaSection {
+  margin-top: 6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.quintaSection .boxCardsAvaliacoes {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+}
+.quintaSection .cardsAvaliacoes {
+  padding: 1.2rem;
+  min-height: 18rem;
+  width: 20rem;
+  border: 1px solid #16a34a;
+  border-radius: 0.375rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.quintaSection .cardsAvaliacoes h4,
+.quintaSection .cardsAvaliacoes h3 {
+  font-weight: normal;
+}
+.quintaSection .cardsAvaliacoes h3 {
+  font-size: 1rem;
+}
+.quintaSection .cardsAvaliacoes h4 {
+  font-size: 0.8rem;
+}
+.quintaSection .cabecalhoSectionCentralizado {
+  text-align: center;
+  margin: auto;
+  width: 72rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.quintaSection .cabecalhoSectionCentralizado h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+.quintaSection .cabecalhoSectionCentralizado p {
+  font-size: 1.5rem;
 }/*# sourceMappingURL=style.css.map */

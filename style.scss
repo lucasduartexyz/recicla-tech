@@ -45,6 +45,18 @@ header {
   padding: 18px;
   border-radius: 6px;
 }
+.cabecalhoSection {
+  margin: auto;
+  width: 72rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
 .primeiraSection {
   margin: 100px 0px;
   display: flex;
@@ -144,6 +156,7 @@ header {
       font-weight: normal;
       font-size: 1.5rem;
       display: flex;
+      gap: 0.5rem;
       align-items: center;
     }
     #paraDoadores {
@@ -168,44 +181,93 @@ header {
   }
 }
 
-.produtosDisponiveis {
-  background-color: rgb(203, 244, 230);
-  height: 85vh;
+.quartaSection {
+  margin-top: 6rem;
   display: flex;
-  justify-content: space-evenly;
-  justify-content: space-between;
-  justify-content: space-around;
-  align-items: flex-end;
-  align-items: flex-start;
-  align-items: center;
-
-  article {
-    border: solid red;
-    width: 20%;
-    height: 60vh;
+  flex-direction: column;
+  gap: 3rem;
+  .produtosDisponiveis {
+    margin: auto;
+    width: 72rem;
     display: flex;
     flex-direction: column;
-
-    justify-content: space-between;
-
-    align-items: center;
-
-    img {
-      width: 100%;
-      height: 30vh;
-      border: solid;
+    justify-content: center;
+    gap: 1rem;
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
     }
+  }
+  .boxCardsProdutos {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+  }
 
-    button {
-      width: 45%;
-      height: 5vh;
-      cursor: pointer;
-      margin-bottom: 1rem;
-      background-color: #16a34a;
-      color: #ffffff;
-      font-weight: 900;
-      border-radius: 15px;
-      font-size: 1.2rem;
+  .cardProduto {
+    width: 20rem;
+    text-align: center;
+    border: 1px solid #16a34a;
+    border-radius: 0.375rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-bottom: 1rem;
+  }
+  .buttonCardProduto {
+    margin: auto;
+    border: none;
+    background-color: #16a34a;
+    color: #ffffff;
+    padding: 0.625rem;
+    border-radius: 6px;
+    width: 12rem;
+  }
+}
+
+.quintaSection {
+  margin-top: 6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  .boxCardsAvaliacoes {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+  }
+  .cardsAvaliacoes {
+    padding: 1.2rem;
+    min-height: 18rem;
+    width: 20rem;
+    border: 1px solid #16a34a;
+    border-radius: 0.375rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    h4,
+    h3 {
+      font-weight: normal;
+    }
+    h3 {
+      font-size: 1rem;
+    }
+    h4 {
+      font-size: 0.8rem;
+    }
+  }
+  .cabecalhoSectionCentralizado {
+    text-align: center;
+    margin: auto;
+    width: 72rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+    }
+    p {
+      font-size: 1.5rem;
     }
   }
 }
