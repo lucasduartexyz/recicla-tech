@@ -1,4 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root {
+  --cor-botao-verde: #16a34a;
+  --cor-botao-hover: #21c05c;
+  --cor-azul: #2563eb;
+  --cor-titulo: #1f2937;
+  --cor-subtitulo: #4b5563;
+  --cor-cinza-claro: #b4aeae;
+  --cor-branco: #ffffff;
+  --cor-preto: #000000;
+  --largura-maxima-secao: 72rem;
+  --espacamento-grande: 6rem;
+  --espacamento-medio: 3rem;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -14,10 +28,11 @@ header {
   display: flex;
   justify-content: space-around;
   height: 15vh;
-  align-items: flex-start;
-  align-items: flex-end;
   align-items: center;
-  border-bottom: 1px solid #b4aeae;
+  border-bottom: 1px solid var(--cor-cinza-claro);
+}
+header h1 {
+  color: var(--cor-titulo);
 }
 header div {
   display: flex;
@@ -34,32 +49,19 @@ header nav {
 header nav a {
   text-decoration: none;
   font-size: 1.2rem;
-  color: #4b5563;
+  color: var(--cor-subtitulo);
 }
-header .btnVerdeHeader:hover {
-  background-color: #1ca04c;
-}
-
-.btnVerdeHeader {
-  background-color: #21c05c;
-  color: #ffffff;
+header .btnVerdeHeader {
+  background-color: var(--cor-botao-hover);
+  color: var(--cor-branco);
   font-size: 1.5rem;
   cursor: pointer;
   padding: 18px;
   border-radius: 6px;
+  transition: background-color 0.3s ease;
 }
-
-.cabecalhoSection {
-  margin: auto;
-  width: 72rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 1rem;
-}
-.cabecalhoSection h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
+header .btnVerdeHeader:hover {
+  background-color: var(--cor-botao-verde);
 }
 
 .primeiraSection {
@@ -68,27 +70,29 @@ header .btnVerdeHeader:hover {
   justify-content: center;
   gap: 100px;
 }
-.primeiraSection section {
+.primeiraSection .conteudoPrimeiraSection {
   width: 700px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
-.primeiraSection section h2 {
+.primeiraSection .conteudoPrimeiraSection h2 {
   font-size: 3.5rem;
   margin-bottom: 1.2rem;
+  color: var(--cor-titulo);
 }
-.primeiraSection section p {
+.primeiraSection .conteudoPrimeiraSection p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
+  color: var(--cor-subtitulo);
 }
-.primeiraSection section .boxBntsPrimeiraSection {
+.primeiraSection .conteudoPrimeiraSection .boxBntsPrimeiraSection {
   display: flex;
   gap: 20px;
 }
-.primeiraSection section .btnVerde {
-  background-color: #21c05c;
-  color: #ffffff;
+.primeiraSection .conteudoPrimeiraSection .btnVerde {
+  background-color: var(--cor-botao-hover);
+  color: var(--cor-branco);
   cursor: pointer;
   justify-content: center;
   width: 170px;
@@ -98,24 +102,28 @@ header .btnVerdeHeader:hover {
   display: flex;
   align-items: center;
   gap: 10px;
+  transition: background-color 0.3s ease;
 }
-.primeiraSection section .btnVerde img {
+.primeiraSection .conteudoPrimeiraSection .btnVerde:hover {
+  background-color: var(--cor-botao-verde);
+}
+.primeiraSection .conteudoPrimeiraSection .btnVerde img {
   width: 1.2rem;
 }
-.primeiraSection section .btnBranco {
-  background-color: #ffffff;
-  color: #2563eb;
+.primeiraSection .conteudoPrimeiraSection .btnBranco {
+  background-color: var(--cor-branco);
+  color: var(--cor-azul);
   cursor: pointer;
   justify-content: center;
   width: 170px;
   padding: 18px;
   border-radius: 6px;
-  border: 1px solid #2563eb;
+  border: 1px solid var(--cor-azul);
   display: flex;
   align-items: center;
   gap: 10px;
 }
-.primeiraSection section .btnBranco img {
+.primeiraSection .conteudoPrimeiraSection .btnBranco img {
   width: 1.2rem;
 }
 
@@ -133,26 +141,17 @@ header .btnVerdeHeader:hover {
 }
 .segundaSection .cardSegundaSection h2 {
   font-size: 2.5rem;
-  color: #16a34a;
+  color: var(--cor-botao-verde);
+}
+.segundaSection .cardSegundaSection p {
+  color: var(--cor-subtitulo);
 }
 
 .terceiraSection {
-  margin-top: 6rem;
+  margin-top: var(--espacamento-grande);
   display: flex;
   flex-direction: column;
-  gap: 3rem;
-}
-.terceiraSection .comoFunciona {
-  margin: auto;
-  width: 72rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 1rem;
-}
-.terceiraSection .comoFunciona h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
+  gap: var(--espacamento-medio);
 }
 .terceiraSection .boxCardsTerceiraSection {
   display: flex;
@@ -160,7 +159,7 @@ header .btnVerdeHeader:hover {
   gap: 12rem;
 }
 .terceiraSection .boxCardsTerceiraSection p {
-  color: #4b5563;
+  color: var(--cor-subtitulo);
 }
 .terceiraSection .boxCardsTerceiraSection h3 {
   font-weight: normal;
@@ -168,12 +167,13 @@ header .btnVerdeHeader:hover {
   display: flex;
   gap: 0.5rem;
   align-items: center;
+  color: var(--cor-titulo);
 }
-.terceiraSection .boxCardsTerceiraSection #paraDoadores {
-  color: #16a34a;
+.terceiraSection .boxCardsTerceiraSection .tituloCardDoadores {
+  color: var(--cor-botao-verde);
 }
-.terceiraSection .boxCardsTerceiraSection #paraAdquirentes {
-  color: #2563eb;
+.terceiraSection .boxCardsTerceiraSection .tituloCardAdquirentes {
+  color: var(--cor-azul);
 }
 .terceiraSection .cardsTerceiraSection {
   display: flex;
@@ -187,22 +187,10 @@ header .btnVerdeHeader:hover {
 }
 
 .quartaSection {
-  margin-top: 6rem;
+  margin-top: var(--espacamento-grande);
   display: flex;
   flex-direction: column;
-  gap: 3rem;
-}
-.quartaSection .produtosDisponiveis {
-  margin: auto;
-  width: 72rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 1rem;
-}
-.quartaSection .produtosDisponiveis h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
+  gap: var(--espacamento-medio);
 }
 .quartaSection .boxCardsProdutos {
   display: flex;
@@ -212,28 +200,39 @@ header .btnVerdeHeader:hover {
 .quartaSection .cardProduto {
   width: 20rem;
   text-align: center;
-  border: 1px solid #16a34a;
+  border: 1px solid var(--cor-botao-verde);
   border-radius: 0.375rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
   padding-bottom: 1rem;
 }
+.quartaSection .cardProduto h2 {
+  color: var(--cor-titulo);
+}
+.quartaSection .cardProduto p {
+  color: var(--cor-subtitulo);
+}
 .quartaSection .buttonCardProduto {
   margin: auto;
   border: none;
-  background-color: #16a34a;
-  color: #ffffff;
+  background-color: var(--cor-botao-verde);
+  color: var(--cor-branco);
   padding: 0.625rem;
   border-radius: 6px;
   width: 12rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.quartaSection .buttonCardProduto:hover {
+  background-color: var(--cor-botao-hover);
 }
 
 .quintaSection {
-  margin-top: 6rem;
+  margin-top: var(--espacamento-grande);
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: var(--espacamento-medio);
 }
 .quintaSection .boxCardsAvaliacoes {
   display: flex;
@@ -244,47 +243,32 @@ header .btnVerdeHeader:hover {
   padding: 1.2rem;
   min-height: 18rem;
   width: 20rem;
-  border: 1px solid #16a34a;
+  border: 1px solid var(--cor-botao-verde);
   border-radius: 0.375rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
-.quintaSection .cardsAvaliacoes h4,
 .quintaSection .cardsAvaliacoes h3 {
   font-weight: normal;
-}
-.quintaSection .cardsAvaliacoes h3 {
   font-size: 1rem;
+  color: var(--cor-titulo);
 }
 .quintaSection .cardsAvaliacoes h4 {
+  font-weight: normal;
   font-size: 0.8rem;
+  color: var(--cor-subtitulo);
 }
-
-.cabecalhoSectionCentralizado {
-  text-align: center;
-  margin: auto;
-  width: 72rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.cabecalhoSectionCentralizado h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
-}
-.cabecalhoSectionCentralizado p {
-  width: 42rem;
-  margin: auto;
-  font-size: 1.5rem;
+.quintaSection .cardsAvaliacoes p {
+  color: var(--cor-subtitulo);
 }
 
 .sextaSection {
-  margin-top: 6rem;
+  margin-top: var(--espacamento-grande);
   display: flex;
   flex-direction: column;
-  gap: 3rem;
-  padding-bottom: 6rem;
+  gap: var(--espacamento-medio);
+  padding-bottom: var(--espacamento-grande);
 }
 .sextaSection .boxBotoes {
   display: flex;
@@ -292,28 +276,70 @@ header .btnVerdeHeader:hover {
   gap: 2rem;
 }
 .sextaSection .boxBotoes button {
-  color: #ffffff;
-  background: #16a34a;
+  color: var(--cor-branco);
+  background: var(--cor-botao-verde);
   font-size: 1rem;
   padding: 0.7rem;
   width: 12rem;
   border: none;
   border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.sextaSection .boxBotoes button:hover {
+  background-color: var(--cor-botao-hover);
 }
 .sextaSection .boxBotoes .botaoBrancoBordaVerde {
-  color: #16a34a;
-  background: #ffffff;
-  border: 1px solid #16a34a;
+  color: var(--cor-botao-verde);
+  background: var(--cor-branco);
+  border: 1px solid var(--cor-botao-verde);
+}
+
+.cabecalhoSection {
+  margin: auto;
+  width: var(--largura-maxima-secao);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+.cabecalhoSection h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--cor-titulo);
+}
+.cabecalhoSection p {
+  color: var(--cor-subtitulo);
+}
+
+.cabecalhoSectionCentralizado {
+  text-align: center;
+  margin: auto;
+  width: var(--largura-maxima-secao);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.cabecalhoSectionCentralizado h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--cor-titulo);
+}
+.cabecalhoSectionCentralizado p {
+  width: 42rem;
+  margin: auto;
+  font-size: 1.5rem;
+  color: var(--cor-subtitulo);
 }
 
 footer {
-  background: #1f2937;
-  color: #ffffff;
+  background: var(--cor-titulo);
+  color: var(--cor-branco);
 }
 footer .informacoesFooter {
   display: flex;
   justify-content: center;
-  padding: 3rem;
+  padding: var(--espacamento-medio);
   gap: 9rem;
 }
 footer .boxInfoFooter {
@@ -333,9 +359,151 @@ footer .iconsRedesSociais {
 }
 
 .footerCopyright {
-  border-top: 1px solid #4b5563;
+  border-top: 1px solid var(--cor-subtitulo);
   text-align: center;
   padding: 1rem;
   width: 64rem;
   margin: auto;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem;
+    gap: 1rem;
+  }
+  header div {
+    width: 100%;
+    justify-content: center;
+  }
+  header nav {
+    width: 100%;
+    gap: 1rem;
+  }
+  header nav a {
+    font-size: 1rem;
+    text-align: center;
+  }
+  header nav .btnVerdeHeader {
+    font-size: 1rem;
+    padding: 12px;
+    text-align: center;
+  }
+  .primeiraSection {
+    flex-direction: column;
+    margin: 2rem 0;
+    gap: 2rem;
+    padding: 1rem;
+  }
+  .primeiraSection .conteudoPrimeiraSection {
+    width: 100%;
+  }
+  .primeiraSection .conteudoPrimeiraSection h2 {
+    font-size: 2rem;
+  }
+  .primeiraSection .conteudoPrimeiraSection p {
+    font-size: 1rem;
+  }
+  .primeiraSection .conteudoPrimeiraSection .boxBntsPrimeiraSection {
+    justify-content: center;
+    gap: 1rem;
+  }
+  .primeiraSection .conteudoPrimeiraSection .boxBntsPrimeiraSection .btnVerde,
+  .primeiraSection .conteudoPrimeiraSection .boxBntsPrimeiraSection .btnBranco {
+    font-size: 1rem;
+    padding: 14px;
+  }
+  .segundaSection {
+    gap: 2rem;
+    padding: 2rem 1rem;
+  }
+  .segundaSection .cardSegundaSection h2 {
+    font-size: 2rem;
+  }
+  .terceiraSection {
+    padding: 1rem;
+  }
+  .terceiraSection .boxCardsTerceiraSection {
+    flex-direction: column;
+    margin: auto;
+    gap: 2rem;
+  }
+  .terceiraSection .boxCardsTerceiraSection h3 {
+    font-size: 1.2rem;
+  }
+  .quartaSection {
+    padding: 1rem;
+  }
+  .quartaSection .boxCardsProdutos {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+  .quartaSection .boxCardsProdutos .cardProduto {
+    width: 100%;
+    max-width: 20rem;
+  }
+  .quintaSection {
+    padding: 1rem;
+  }
+  .quintaSection .boxCardsAvaliacoes {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+  .quintaSection .boxCardsAvaliacoes .cardsAvaliacoes {
+    width: 100%;
+    max-width: 20rem;
+    min-height: auto;
+  }
+  .sextaSection {
+    padding: 1rem;
+    padding-bottom: 4rem;
+  }
+  .sextaSection .boxBotoes {
+    gap: 1rem;
+    align-items: center;
+  }
+  .cabecalhoSection {
+    width: 100%;
+    padding: 0 1rem;
+  }
+  .cabecalhoSection h2 {
+    font-size: 1.8rem;
+  }
+  .cabecalhoSection p {
+    font-size: 1rem;
+  }
+  .cabecalhoSectionCentralizado {
+    width: 100%;
+    padding: 0 1rem;
+  }
+  .cabecalhoSectionCentralizado h2 {
+    font-size: 1.8rem;
+  }
+  .cabecalhoSectionCentralizado p {
+    width: 100%;
+    font-size: 1rem;
+  }
+  footer .informacoesFooter {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem 1rem;
+  }
+  footer .boxInfoFooter {
+    width: 100%;
+    text-align: center;
+  }
+  footer .boxInfoFooter h2 {
+    justify-content: center;
+  }
+  footer .iconsRedesSociais {
+    justify-content: center;
+  }
+  .footerCopyright {
+    width: 100%;
+    padding: 1rem;
+    font-size: 0.875rem;
+  }
 }/*# sourceMappingURL=style.css.map */
